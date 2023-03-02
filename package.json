@@ -1,0 +1,50 @@
+{
+  "name": "@zazuko/s",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "zazuko-s": "bin/zazuko-s.mjs"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint --quiet --ext js,mjs . --ignore-path .eslintignore --ignore-path .gitignore",
+    "release": "changeset publish",
+    "test": "mocha test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@tpluscode/eslint-config": "^0.4.2",
+    "chai": "^4.3.7",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-require-extensions": "^0.1.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "mocha": "^10.2.0",
+    "sinon": "^15.0.1",
+    "sinon-chai": "^3.7.0",
+    "standard": "^17.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --quiet --fix",
+      "prettier --write"
+    ]
+  },
+  "mocha": {
+    "require": [
+      "mocha-setup.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zazuko/shortener.git"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.26.0"
+  }
+}
