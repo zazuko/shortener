@@ -1,1 +1,1 @@
-export function shorten(url: string, _fetch?: typeof fetch): string
+export function shorten(url: string, _fetch?: typeof fetch): Promise<string>
