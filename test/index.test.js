@@ -24,7 +24,7 @@ describe("@zazuko/s", function () {
         body: sinon.match((params) => {
           return params.toString() === "url=long+url";
         }),
-      }
+      },
     );
   });
 });
