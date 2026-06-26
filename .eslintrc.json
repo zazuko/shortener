@@ -1,6 +1,0 @@
-{
-  "extends": [ "@tpluscode/eslint-config/js" ],
-  "env": {
-    "mocha": true
-  }
-}

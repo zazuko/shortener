@@ -4,30 +4,27 @@
   "license": "MIT",
   "main": "index.js",
   "types": "index.d.ts",
+  "type": "module",
   "bin": {
-    "zazuko-s": "bin/zazuko-s.mjs"
+    "zazuko-s": "bin/zazuko-s.js"
   },
   "scripts": {
-    "prepare": "husky install",
-    "lint": "eslint --quiet --ext js,mjs . --ignore-path .eslintignore --ignore-path .gitignore",
+    "prepare": "husky",
+    "lint": "eslint --quiet .",
     "release": "changeset publish",
-    "test": "mocha test/*.test.mjs"
+    "test": "mocha test/*.test.js"
   },
   "devDependencies": {
-    "@tpluscode/eslint-config": "^0.4.2",
-    "chai": "^4.3.7",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-require-extensions": "^0.1.2",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.2",
-    "mocha": "^10.2.0",
-    "sinon": "^15.0.1",
-    "sinon-chai": "^3.7.0",
-    "standard": "^17.0.0"
+    "@changesets/cli": "^2.31",
+    "@eslint/js": "^9",
+    "@tpluscode/eslint-config": "^1.1.0",
+    "chai": "^5",
+    "eslint": "^9",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "mocha": "^11",
+    "sinon": "^19.0.5",
+    "sinon-chai": "^4.0.1"
   },
   "lint-staged": {
     "*.js": [
@@ -44,7 +41,7 @@
     "type": "git",
     "url": "https://github.com/zazuko/shortener.git"
   },
-  "dependencies": {
-    "@changesets/cli": "^2.26.0"
+  "engines": {
+    "node": ">=21"
   }
 }
