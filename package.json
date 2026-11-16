@@ -28,8 +28,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --quiet --fix",
-      "prettier --write"
+      "eslint --quiet --fix"
     ]
   },
   "mocha": {
